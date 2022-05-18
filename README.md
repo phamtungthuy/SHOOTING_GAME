@@ -41,7 +41,7 @@
     - (7) sử dụng các vòng lặp, biến toàn cục, biến static,...  
     - (8) thuật toán xử lý va chạm giữa các đối tượng.  
 5.   
- - (1)Kết luận: Về cơ bản mình thấy game khá ổn định, mình đã test rất nhiều lần, bạn sẽ ít khi gặp những lỗi cơ bản khi chơi game ổn định   
+ - (1)Kết luận: Về cơ bản mình thấy game khá ổn định, mình đã test rất nhiều lần, bạn sẽ ít khi gặp những lỗi cơ bản khi chơi game  
    - Tuy nhiên, bên cạnh đó trò chơi mình vẫn còn một vài chỗ thiếu xót:
       - Hình ảnh vẫn còn chưa đẹp.
       - Bản đồ vẫn còn quá nhỏ.  

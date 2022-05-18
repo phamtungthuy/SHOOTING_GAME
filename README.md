@@ -2,7 +2,7 @@
 1. Hướng dẫn cách lấy file code.  
     - Bước 1: Chọn Fork ở góc trên bên phải để liên kết nơi lưu trữ này đến tài khoản của bạn.  
     - Bước 2: Đến thư mục bạn muốn lưu trữ, nhân chuột phải chọn terminal hoặc gitBash xong gõ câu lệnh:  
-        - git clone https://github.com/[YOUR_USERNAME]/SHOOTING_GAME.git  
+        - *git clone https://github.com/[YOUR_USERNAME]/SHOOTING_GAME.git*  
     - Bước 3: Thoát cửa sổ lệnh. Giờ đây file đã được copy vào nơi lưu trữ của bạn.  
 2. Mô tả Game:  
     - Trò chơi tương tự như game Contra cổ điển nhưng đơn giản hơn.   
@@ -68,8 +68,8 @@
       - Việc làm bài tập lớn này giúp cho khả năng cũng như hiểu biết của mình về ngôn ngữ C++ được cải thiện đáng kể khi phải làm quen với nhiều dữ liệu mới.  
       - Dần dần học được cách clean code, refactor.  
         
-ĐÂY LÀ NHỮNG CHIA SẺ MÌNH SAU MỘT THỜI GIAN DÀI HOÀN THÀNH BÀI TẬP LỚN NÀY. MONG SẼ GIÚP ÍCH BẠN ĐƯỢC PHẦN NÀO.   
-CẢM ƠN BẠN VÌ ĐÃ QUAN TÂM!  
+**ĐÂY LÀ NHỮNG CHIA SẺ MÌNH SAU MỘT THỜI GIAN DÀI HOÀN THÀNH BÀI TẬP LỚN NÀY. MONG SẼ GIÚP ÍCH BẠN ĐƯỢC PHẦN NÀO.   
+CẢM ƠN BẠN VÌ ĐÃ QUAN TÂM!**
   
       
     

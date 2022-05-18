@@ -1,0 +1,225 @@
+# depslib dependency file v1.0
+1651593557 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\commonfunc.cpp
+	"CommonFunc.h"
+
+1651765870 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\commonfunc.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL_mixer.h>
+	<chrono>
+	<thread>
+	<vector>
+	<windows.h>
+	<fstream>
+
+1651741543 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\baseobject.cpp
+	"BaseObject.h"
+
+1651852379 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\main.cpp
+	"CommonFunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"ImpTimer.h"
+	"ThreatsObject.h"
+	"ExplosionObject.h"
+	"TextObject.h"
+	"PlayerPower.h"
+	"Geometric.h"
+	"PlaneThreats.h"
+
+1651378784 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\baseobject.h
+	"CommonFunc.h"
+
+1651742672 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\game_map.cpp
+	"game_map.h"
+
+1651742451 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\game_map.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651852220 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\mainobject.cpp
+	"MainObject.h"
+
+1651852413 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\mainobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1650645114 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\imptimer.cpp
+	"CommonFunc.h"
+	"ImpTimer.h"
+
+1650906427 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\imptimer.h
+
+1651657850 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\bulletobject.cpp
+	"BulletObject.h"
+
+1651657342 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\bulletobject.h
+	"BaseObject.h"
+	"CommonFunc.h"
+
+1651680408 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\threatsobject.cpp
+	"ThreatsObject.h"
+
+1651678857 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\threatsobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1651488114 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\explosionobject.cpp
+	"ExplosionObject.h"
+
+1651488117 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\explosionobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651551615 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\textobject.cpp
+	"TextObject.h"
+
+1651550228 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\textobject.h
+	"CommonFunc.h"
+
+1651561400 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\playerpower.cpp
+	"PlayerPower.h"
+
+1651561193 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\playerpower.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651575175 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\geometric.cpp
+	"Geometric.h"
+
+1651572418 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\geometric.h
+	"CommonFunc.h"
+
+1651680481 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\planethreats.cpp
+	"PlaneThreats.h"
+
+1651677999 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\sdlgame\planethreats.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1652185184 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\baseobject.cpp
+	"BaseObject.h"
+
+1652784353 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\baseobject.h
+	"CommonFunc.h"
+
+1652760776 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\commonfunc.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL_mixer.h>
+	<chrono>
+	<thread>
+	<vector>
+	<windows.h>
+	<fstream>
+
+1652532656 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\bulletobject.cpp
+	"BulletObject.h"
+
+1652161545 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\bulletobject.h
+	"BaseObject.h"
+	"CommonFunc.h"
+
+1652805865 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\commonfunc.cpp
+	"CommonFunc.h"
+	"TextObject.h"
+
+1651488114 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\explosionobject.cpp
+	"ExplosionObject.h"
+
+1651488117 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\explosionobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651742672 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\game_map.cpp
+	"game_map.h"
+
+1651742451 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\game_map.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651575175 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\geometric.cpp
+	"Geometric.h"
+
+1651572418 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\geometric.h
+	"CommonFunc.h"
+
+1650645114 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\imptimer.cpp
+	"CommonFunc.h"
+	"ImpTimer.h"
+
+1650906427 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\imptimer.h
+
+1652793189 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\main.cpp
+	"PlayGame.h"
+
+1652805880 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\mainobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1652804396 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\threatsobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1652526503 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\textobject.h
+	"CommonFunc.h"
+
+1651561193 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\playerpower.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1652804407 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\planethreats.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1652834398 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\mainobject.cpp
+	"MainObject.h"
+
+1652804486 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\planethreats.cpp
+	"PlaneThreats.h"
+
+1651561400 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\playerpower.cpp
+	"PlayerPower.h"
+
+1652524113 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\textobject.cpp
+	"TextObject.h"
+
+1652804304 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\threatsobject.cpp
+	"ThreatsObject.h"
+
+1652719382 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\bossobject.h
+	"CommonFunc.h"
+	"BulletObject.h"
+	"BaseObject.h"
+
+1652719395 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\bossobject.cpp
+	"BossObject.h"
+
+1652793111 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\playgame.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"ImpTimer.h"
+	"ThreatsObject.h"
+	"ExplosionObject.h"
+	"TextObject.h"
+	"PlayerPower.h"
+	"Geometric.h"
+	"PlaneThreats.h"
+	"BossObject.h"
+
+1652834498 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\playgame.cpp
+	"PlayGame.h"
+

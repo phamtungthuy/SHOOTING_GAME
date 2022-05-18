@@ -42,12 +42,13 @@
     - (8) thuật toán xử lý va chạm giữa các đối tượng.  
 5.   
  - (1)Kết luận: Về cơ bản mình thấy game khá ổn định, mình đã test rất nhiều lần về cơ bản sẽ ít khi gặp những lỗi cơ bản => bạn có thể chơi game ổn định   
-   - Tuy nhiên, bên cạnh đó trò chơi mình vẫn còn một vài chỗ thiếu xót:  
+   - Tuy nhiên, bên cạnh đó trò chơi mình vẫn còn một vài chỗ thiếu xót:
+      - Hình ảnh vẫn còn chưa đẹp.
       - Bản đồ vẫn còn quá nhỏ.  
       - Ăn tiền chưa biết làm gì.  
       - Hiệu ứng âm thanh vẫn còn cải thiện.  
       - Chưa thể lưu trữ điểm của người chơi.  
-      - Chưa thể lưu tiến độ của người chơi.  
+      - Chưa thể lưu tiến độ của người chơi.
  - (2)Hướng phát triển:  
     - Mình dự kiến thêm tính năng khác:  
       - Tạo boss gần vạch đích.  

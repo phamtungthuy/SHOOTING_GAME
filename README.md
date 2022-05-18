@@ -1,6 +1,6 @@
 # SHOOTING_GAME
 1. Hướng dẫn cách lấy file code.  
-			Bước 1: Chọn Fork ở góc trên bên phải để liên kết nơi lưu trữ này đến tài khoản của bạn.  
+	 Bước 1: Chọn Fork ở góc trên bên phải để liên kết nơi lưu trữ này đến tài khoản của bạn.  
   Bước 2: Đến thư mục bạn muốn lưu trữ, nhân chuột phải chọn terminal hoặc gitBash xong gõ câu lệnh:  
         git clone https://github.com/[YOUR_USERNAME]/SHOOTING_GAME.git  
   Bước 3: Thoát cửa sổ lệnh. Giờ đây file đã được copy vào nơi lưu trữ của bạn.  

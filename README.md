@@ -15,7 +15,7 @@
     - Chú ý: có 3 loại quái vật:  
       - Những con quái vật không thể di chuyển được nhưng bắn laser từ miệng mình <=> 10 điểm.  
       - Những con quái vật di chuyển quanh một khu vực nhất định <=> 5 điểm.  
-      - Những chiêc máy bay có thể thả bom trên bầu trời <=> 20 điểm.  
+      - Những chiếc máy bay có thể thả bom trên bầu trời <=> 20 điểm.  
     - Hãy cẩn thận vì nếu bạn va phải quái vật hay trúng đạn, bạn sẽ mất 1 mạng.  
     - Hãy đánh bại và chinh phục trò chơi!  
 3. Chức năng của Game:  

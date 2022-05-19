@@ -46,8 +46,8 @@
       - Hình ảnh vẫn còn chưa đẹp.
       - Bản đồ vẫn còn quá nhỏ.  
       - Ăn tiền chưa biết làm gì.  
-      - Hiệu ứng âm thanh vẫn còn cải thiện.  
-      - Chưa thể lưu trữ điểm của người chơi.  
+      - Hiệu ứng âm thanh vẫn còn cần cải thiện.  
+      - Chưa thể lưu điểm của người chơi sau mỗi lần chơi.  
       - Chưa thể lưu tiến độ của người chơi.
  - (2)Hướng phát triển:  
     - Mình dự kiến thêm tính năng khác:  

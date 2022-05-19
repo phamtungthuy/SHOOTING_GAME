@@ -35,7 +35,7 @@
     - (1) thư viện SDL, SDL_image, SDL_mixer và SDL_ttf.  
     - (2) sử dụng thêm các file hình ảnh, âm thanh, font chữ bên ngoài.  
     - (3) mảng, mảng con trỏ, mảng vector.  
-    - (4) sử dụng truy xuất tệp dữ diệu bên ngoài (file .txt, ...).  
+    - (4) sử dụng truy xuất tệp dữ diệu bên ngoài (file .txt, .dat ...).  
     - (5) sử dụng lớp class: tính đóng gói, tính kế thừa,... để tạo các đối tượng.  
     - (6) sử dụng tách file .h, .cpp để dễ quản lý và phân ra từng chức năng.  
     - (7) sử dụng các vòng lặp, biến toàn cục, biến static,...  

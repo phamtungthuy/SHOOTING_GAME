@@ -19,8 +19,9 @@
     - Hãy cẩn thận vì nếu bạn va phải quái vật hay trúng đạn, bạn sẽ mất 1 mạng.  
     - Hãy đánh bại và chinh phục trò chơi!  
 3. Chức năng của Game:  
-   - (1) Phần menu: có 2 lựa chọn:  
-        -  ô "Play Game": bắt đầu game khi ấn vào.  
+   - (1) Phần menu: có 3 lựa chọn:  
+        -  ô "Play Game": bắt đầu game khi ấn vào.
+        -  ô "Tutorial": hướng dẫn chơi game.  
         -  ô "Exit" nếu bạn không muốn chơi nữa, hãy ấn vào nó.  
    - (2) Dấu "X" bên phải màn hình nếu bạn muốn thoát trò chơi.  
    - (3) Thanh trên cùng hiển thị chỉ số mạng, số coin, điểm và giới hạn thời gian.  
@@ -28,9 +29,10 @@
    - (5) Các khối block hình đồng tiền, có thể ăn.  
    - (6) Nếu chết có thể ấn nút SPACE để chơi lại hoặc nút ESC để thoát game.  
    - (7) Dùng dấu mũi tên LEFT, RIGHT, UP, DOWN trên bàn phím để di chuyển nhân vật.  
-   - (8) Nút A dùng để bắn và nút SPACE dùng để nhảy.  
-   - (9) Có thể bắn sang trái, phải, hoặc bắn 1 góc 45 độ phía trên hoặc dưới.  
-   - (10) Chạm vào cây cờ cuối bản đồ để giành chiến thắng.  
+   - (8) Nút A dùng để bắn và nút SPACE dùng để nhảy.
+   - (9) Nút ESC dùng để tạm dừng trò chơi
+   - (10) Có thể bắn sang trái, phải, hoặc bắn 1 góc 45 độ phía trên hoặc dưới.  
+   - (11) Chạm vào cây cờ cuối bản đồ để giành chiến thắng.  
 4. Kỹ thuật được sử dụng trong dự án:  
     - (1) thư viện SDL, SDL_image, SDL_mixer và SDL_ttf.  
     - (2) sử dụng thêm các file hình ảnh, âm thanh, font chữ bên ngoài.  

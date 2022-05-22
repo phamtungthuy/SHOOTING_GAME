@@ -1,4 +1,5 @@
 # SHOOTING_GAME
+Link youtube hướng dẫn cách hoạt động cơ bản của game: *https://www.youtube.com/watch?v=0FTAI7ZdOeI*  
 1. Hướng dẫn cách lấy file code.  
     - Bước 1: Chọn Fork ở góc trên bên phải để liên kết nơi lưu trữ này đến tài khoản của bạn.  
     - Bước 2: Đến thư mục bạn muốn lưu trữ, nhấn chuột phải chọn terminal hoặc gitBash xong gõ câu lệnh:  

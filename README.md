@@ -5,7 +5,7 @@
         - *git clone https://github.com/[YOUR_USERNAME]/SHOOTING_GAME.git*  
     - Bước 3: Thoát cửa sổ lệnh. Giờ đây file đã được copy vào nơi lưu trữ của bạn.  
 2. Mô tả Game:  
-    - Trò chơi tương tự như game Contra cổ điển nhưng đơn giản hơn.   
+    - Trò chơi tương tự như game Contra cổ điển.   
     - Bạn điều khiển một nhân vật có thể di chuyển tự do, hãy cẩn thận với những quái vật cản đường bạn và những khe vực sâu.  
     - Chú ý bạn chỉ có 3 mạng hãy cẩn thận!  
     - Giới hạn thời gian là 300s, bạn hãy cố gắng đánh bại quái vật 1 cách nhanh nhất có thể, nếu không bạn sẽ thua!  

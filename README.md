@@ -12,10 +12,11 @@
     - Hãy dùng khẩu súng của bạn một cách hợp lý để tiêu diệt quái vật và tích điểm nhiều nhất có thể.  
     - Trên đường đi có những đồng tiền, hãy ăn nó, nó có thể giúp ích bạn nhiều đấy!  
     - Đích đến là 1 lá cờ, bạn chỉ cần đến đó => bạn sẽ chiến thắng.  
-    - Chú ý: có 3 loại quái vật:  
+    - Chú ý: có 4 loại quái vật:  
       - Những con quái vật không thể di chuyển được nhưng bắn laser từ miệng mình <=> 10 điểm.  
       - Những con quái vật di chuyển quanh một khu vực nhất định <=> 5 điểm.  
       - Những chiếc máy bay có thể thả bom trên bầu trời <=> 20 điểm.  
+      - Boss cuối nằm ở gần vạch đích.
     - Hãy cẩn thận vì nếu bạn va phải quái vật hay trúng đạn, bạn sẽ mất 1 mạng.  
     - Hãy đánh bại và chinh phục trò chơi!  
 3. Chức năng của Game:  
@@ -53,8 +54,6 @@
       - Chưa thể lưu tiến độ của người chơi.
  - (2)Hướng phát triển:  
     - Mình dự kiến thêm tính năng khác:  
-      - Tạo boss gần vạch đích.  
-      - Tạo option khi ấn ESC để bạn có thể tự do chỉnh âm thanh hay tạm dừng trò chơi hoặc thoát trò chơi.  
       - Lưu tiến độ của người chơi => Có thể chơi tiếp phần đang chơi dở lần trước, không phải chơi lại từ đầu nếu bạn thoát game.  
       - Mở rộng bản đồ => thêm nhiều loại quát vật đa dạng.  
       - Tạo nhiều bản đồ => có nhiều cửa ải.  

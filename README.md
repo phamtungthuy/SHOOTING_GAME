@@ -18,7 +18,6 @@
       - Những chiếc máy bay có thể thả bom trên bầu trời <=> 20 điểm.  
       - Boss cuối nằm ở gần vạch đích.
     - Hãy cẩn thận vì nếu bạn va phải quái vật hay trúng đạn, bạn sẽ mất 1 mạng.  
-    - Hãy đánh bại và chinh phục trò chơi!  
 3. Chức năng của Game:  
    - (1) Phần menu: có 3 lựa chọn:  
         -  ô "Play Game": bắt đầu game khi ấn vào.

@@ -41,13 +41,12 @@ static SDL_Event g_event;
 static Mix_Music* g_music = NULL;
 static Mix_Chunk* g_chunk = NULL;
 static TTF_Font* font_menu = NULL;
-static bool isRunning = true;
 static int time_over = 0;
 const int MAXSHOW = 2;
 
 
 
-const int FRAME_PER_SECOND = 50;
+const int FRAME_PER_SECOND = 40;
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 640;
 const int SCREEN_BPP = 32;

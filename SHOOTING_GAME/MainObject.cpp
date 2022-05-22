@@ -133,7 +133,15 @@ void MainObject::HandelInputAction(SDL_Event events, SDL_Renderer* screen) {
         default:
             break;
         }
-
+        if(events.key.keysym.sym == SDLK_i) {
+            immortal = !immortal;
+        }
+        if(events.key.keysym.sym == SDLK_o) {
+            x_pos_ = 24500;
+        }
+        else if(events.key.keysym.sym == SDLK_p) {
+            x_pos_ = 0;
+        }
         if(events.key.keysym.sym == SDLK_SPACE) {
             input_type_.jump_ = 1;
         }
@@ -223,6 +231,8 @@ void MainObject::HandleBullet(SDL_Renderer* des, Map& map_data) {
     for(int i = 0; i < p_bullet_list_.size(); i++) {
         BulletObject* p_bullet = p_bullet_list_[i];
         if(p_bullet != NULL) {
+
+            p_bullet->SetRect(p_bullet->GetRect().x - space_x, p_bullet->GetRect().y - space_y);
             int pos_x = p_bullet->GetRect().x + map_data.start_x_;
             int pos_y = p_bullet->GetRect().y + map_data.start_y_;
             if(map_data.tile[pos_y/64][pos_x/64] != BLANK_TILE && map_data.tile[pos_y/64][pos_x/64] != STATE_MONEY) p_bullet->set_is_move(false);
@@ -279,7 +289,7 @@ void MainObject::DoPlayer(Map& map_data) {
     else {
         come_back_time_--;
         if(come_back_time_ == 0) {
-            loadChunk(".\\img\\game resource\\two_beep_.wav", g_chunk);
+            loadChunk(".\\img\\game resource\\beep.wav", g_chunk);
             Mix_PlayChannel(-1, g_chunk, 0);
             if(x_pos_ > 256) {
                 x_pos_ -= 256;
@@ -291,6 +301,12 @@ void MainObject::DoPlayer(Map& map_data) {
             on_ground_ = false;
             inf = SDL_GetTicks() / 1000;
             immortal = false;
+            input_type_.left_ = 0;
+            input_type_.right_ = 0;
+            input_type_.left_ = 0;
+            input_type_.up_ = 0;
+            input_type_.add_bullet_ = 0;
+            input_type_.jump_ = 0;
         }
     }
 }

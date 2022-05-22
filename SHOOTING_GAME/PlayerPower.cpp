@@ -13,7 +13,7 @@ void PlayerPower::AddPos(const int& xPos) {
 }
 
 void PlayerPower::Init(SDL_Renderer* screen) {
-    LoadImg(".\\img\\game resource\\player_pw.png", screen);
+    LoadImg(".\\img\\game resource\\contra_pw.png", screen);
     number_ = 3;
     if(pos_list.size() > 0 ) {
         pos_list.clear();

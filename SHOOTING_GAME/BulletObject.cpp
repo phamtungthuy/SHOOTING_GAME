@@ -24,6 +24,9 @@ bool BulletObject::loadImgBullet(SDL_Renderer* des) {
     else if(bullet_type_ == BOMB) {
         ret = LoadImg(".\\img\\bomb.png", des);
     }
+    else if(bullet_type_ == FIRER) {
+        ret = LoadImg(".\\img\\boss bullet.png", des);
+    }
     return ret;
 }
 

@@ -24,6 +24,7 @@ public:
         SPHERE_BULLET = 50,
         LAZER_BULLET = 51,
         BOMB = 52,
+        FIRER = 53,
     };
 
     void set_x_val(const int& xVal) {x_val_ = xVal;}

@@ -18,7 +18,9 @@ BossObject::BossObject() {
     animation_b_ = 0;
     input_type_.left_ = 0;
     type_move_ = STATIC_THREAT;
-
+    delay = 0;
+    alive = true;
+    health = 50;
 }
 
 BossObject::~BossObject() {
@@ -44,23 +46,36 @@ bool BossObject::LoadImg(string path, SDL_Renderer* screen) {
 
 void BossObject::set_clips() {
     if(width_frame_ > 0 && height_frame_ > 0) {
-        for(int i = 0; i < 8; i++) {
+        for(int i = 0; i < BOSS_FRAME_NUM; i++) {
             frame_clip_[i].x = i * width_frame_;
             frame_clip_[i].y = 0;
             frame_clip_[i].w = width_frame_;
             frame_clip_[i].h = height_frame_;
         }
     }
+
 }
 
 void BossObject::Show(SDL_Renderer* des) {
     if(come_back_time_ == 0) {
         rect_.x = x_pos_ - map_x_;
         rect_.y = y_pos_ - map_y_;
-        frame_++;
+        if(delay == 0) {
+            frame_++;
+            if(health >= BOSS_HEALTH / 3)delay = 3;
+            else delay = 1;
+        }
+        else if(delay > 0) delay--;
         frame_ %= BOSS_FRAME_NUM;
-
         SDL_Rect* currentClip = &frame_clip_[frame_];
+        int pos_x = rect_.x + (width_frame_ - BOSS_HEALTH*3)/2;
+        int pos_y = rect_.y + 50;
+        SDL_Rect outline = {pos_x, pos_y, BOSS_HEALTH*3 + 2, 12};
+        SDL_Rect boss_health = {pos_x + 1, pos_y + 1, health*3, 10};
+        SDL_SetRenderDrawColor(des, 255, 255, 255, 0);
+        SDL_RenderDrawRect(des, &outline);
+        SDL_SetRenderDrawColor(des, 255, 0, 0, 0);
+        SDL_RenderFillRect(des, &boss_health);
         SDL_Rect rendQuad = {rect_.x , rect_.y, width_frame_, height_frame_};
         SDL_RenderCopy(des, p_object_, currentClip, &rendQuad);
     }
@@ -102,6 +117,7 @@ void BossObject::InitThreats() {
     y_pos_ = 0;
     on_ground_ = false;
     input_type_.left_ = 1;
+
 }
 
 void BossObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
@@ -122,12 +138,6 @@ void BossObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
             int val1 = map_data.tile[y1][x2];
             int val2 = map_data.tile[y2][x2];
             if((val1 != BLANK_TILE && val1 != STATE_MONEY) || (val2 != BLANK_TILE && val2 != STATE_MONEY)) {
-                if(type_move_ == MOVE_IN_SPACE_THREAT) {
-                    swap(input_type_.left_, input_type_.right_);
-                    LoadImg(".\\img\\threats5_left.png", screen);
-                    animation_a_ -= 10;
-                    animation_b_ -= 10;
-                }
                 x_pos_ = x2*TILE_SIZE;
                 x_pos_ -= width_frame_ + 1;
                 x_val_ = 0;
@@ -136,12 +146,6 @@ void BossObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
         else if(x_val_ < 0) {
             int val1 = map_data.tile[y1][x1], val2 = map_data.tile[y2][x1];
             if( (val1!= BLANK_TILE && val1 != STATE_MONEY) || (val2 != BLANK_TILE && val2 != STATE_MONEY)) {
-                if(type_move_ == MOVE_IN_SPACE_THREAT) {
-                    swap(input_type_.left_, input_type_.right_);
-                    LoadImg(".\\img\\threats5_right.png", screen);
-                    animation_a_ += 10;
-                    animation_b_ += 10;
-                }
                 x_pos_ = (x1 + 1)*TILE_SIZE;
                 x_val_ = 0;
             }
@@ -188,70 +192,55 @@ void BossObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
 }
 
 void BossObject::ImpMoveType(SDL_Renderer* screen) {
-    if(type_move_ == STATIC_THREAT) return;
-    else {
-        if(on_ground_ == true) {
-            if(x_pos_ > animation_b_) {
-                input_type_.left_ = 1;
-                input_type_.right_ = 0;
-                LoadImg(".\\img\\threats5_left.png", screen);
-            }
-            else if(x_pos_ < animation_a_) {
-                input_type_.right_ = 1;
-                input_type_.left_ = 0;
-                LoadImg(".\\img\\threats5_right.png", screen);
-            }
-        }
-        else {
-            if(input_type_.left_ == 1) {
-                LoadImg(".\\img\\threats5_left.png", screen);
-            }
-
-        }
-    }
 }
 
 void BossObject::InitBullet(BulletObject* p_bullet, SDL_Renderer* screen) {
     if(p_bullet != NULL) {
-        p_bullet->set_bullet_type(BulletObject::LAZER_BULLET);
+        p_bullet->set_bullet_type(BulletObject::FIRER);
         bool ret = p_bullet->loadImgBullet(screen);
         if(!ret) return;
         p_bullet->set_is_move(true);
         p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
-        p_bullet->SetRect(rect_.x+ 10, rect_.y+ 10);
-        p_bullet->set_x_val(10);
+        p_bullet->SetRect(rect_.x  - 50, rect_.y + height_frame_ - 30);
+        p_bullet->set_x_val(15);
         bullet_list_.push_back(p_bullet);
     }
 }
 
-void BossObject::MakeBullet(SDL_Renderer* screen, const int& x_limit, const int& y_limit, Map& map_data, float space) {
+void BossObject::MakeBullet(SDL_Renderer* screen, const int& x_limit, const int& y_limit, Map& map_data, float space_x, float space_y) {
     for(int i = 0; i < bullet_list_.size(); i++) {
         BulletObject* p_bullet = bullet_list_[i];
         if(p_bullet != NULL) {
-            p_bullet->SetRect(p_bullet->GetRect().x - space, p_bullet->GetRect().y);
+
+            p_bullet->SetRect(p_bullet->GetRect().x - space_x, p_bullet->GetRect().y - space_y);
             int pos_x = p_bullet->GetRect().x + map_data.start_x_;
             int pos_y = p_bullet->GetRect().y + map_data.start_y_;
             if(map_data.tile[pos_y/64][pos_x/64] != BLANK_TILE && map_data.tile[pos_y/64][pos_x/64] != STATE_MONEY && abs(pos_x - x_pos_) >= 300) p_bullet->set_is_move(false);
             if(p_bullet->get_is_move()) {
                 int bullet_distance = rect_.x + width_frame_ - p_bullet->GetRect().x;
 
-                if(bullet_distance < 600 && bullet_distance > 0) {
+                if(bullet_distance < 1400 && bullet_distance > 0) {
                     p_bullet->HandleMove(x_limit, y_limit);
                     p_bullet->Render(screen);
                 }
-                else p_bullet->set_is_move(false);
+                else{
+                    bullet_list_.erase(bullet_list_.begin() + i);
+                    if(p_bullet != NULL) {
+                        delete p_bullet;
+                        p_bullet = NULL;
+                    }
+                }
             }
             else {
-
-                p_bullet->set_is_move(true);
-                p_bullet->SetRect(rect_.x + 10, rect_.y + 10);
-                if(rect_.x >= 0 && rect_.x <= SCREEN_WIDTH) {
-                    loadChunk(".\\img\\game resource\\Laser.wav", g_chunk);
-                    Mix_PlayChannel(-1, g_chunk, 0);
+                bullet_list_.erase(bullet_list_.begin() + i);
+                if(p_bullet != NULL) {
+                    delete p_bullet;
+                    p_bullet = NULL;
                 }
             }
         }
     }
+    if(frame_ == 22 && delay == 0) InitBullet(new BulletObject(), screen);
 }
 
 void BossObject::RemoveBullet(const int& idx) {

@@ -14,11 +14,12 @@
 #include "PlaneThreats.h"
 #include "BossObject.h"
 
+
 static bool isQuit = false;
-static bool fatal = true;
+static bool fatal;
 static bool firtStep = true;
 bool InitData();
-void HandleMouse(SDL_Event e, SDL_Rect rect, TextObject &text);
+void HandleMouse(SDL_Event e, SDL_Rect rect, TextObject &text, SDL_Color default_color = BLACKCOLOR, SDL_Color change_color = REDCOLOR);
 bool loadBackground();
 void close();
 vector<ThreatsObject*> MakeThreadList();
@@ -30,6 +31,11 @@ void HandlePlayer(MainObject& p_player, Map& map_data, PlayerPower& player_power
 void drawTextShow(const MainObject &p_player, PlayerMoney& player_money);
 void playGame();
 void showBox();
+void showTutorial();
+void showOptions();
+BossObject* makeBoss();
+void HandleBoss(BossObject* p_boss, MainObject& p_player, Map& map_data, ExplosionObject &exp_main, PlayerPower &player_power);
+void HandleConflictWithBoss(MainObject &p_player, BossObject* p_boss, ExplosionObject &exp_threat);
 
 #endif // PLAY_GAME_H_
 

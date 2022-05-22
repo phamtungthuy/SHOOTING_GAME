@@ -5,6 +5,7 @@
 #include "BulletObject.h"
 #include "BaseObject.h"
 #define BOSS_FRAME_NUM 32
+#define BOSS_HEALTH 50
 class BossObject : public BaseObject{
 public:
     BossObject();
@@ -38,9 +39,13 @@ public:
     void set_bullet_list(const vector<BulletObject*>& bl_list) {bullet_list_ = bl_list;}
 
     void InitBullet(BulletObject* p_bullet, SDL_Renderer* screen);
-    void MakeBullet(SDL_Renderer* screen, const int& x_limit, const int& y_limit, Map& map_data, float space);
+    void MakeBullet(SDL_Renderer* screen, const int& x_limit, const int& y_limit, Map& map_data, float space_x, float space_y);
     void RemoveBullet(const int& idx);
     SDL_Rect GetRectFrame();
+    void set_alive(bool alive_) {alive = alive_;}
+    bool get_alive() const {return alive;}
+    void decrease() {--health;}
+    int get_health() const {return health;}
 private:
 
     int map_x_;
@@ -53,7 +58,7 @@ private:
     bool on_ground_;
     int come_back_time_;
 
-    SDL_Rect frame_clip_[BOSS_FRAME_NUM];
+    SDL_Rect frame_clip_[1000];
     int width_frame_;
     int height_frame_;
     int frame_;
@@ -62,7 +67,9 @@ private:
     int animation_a_;
     int animation_b_;
     Input input_type_;
-
+    bool alive;
     vector<BulletObject*> bullet_list_;
+    int delay;
+    int health;
 };
 #endif // BOSS_OBJECT_H_

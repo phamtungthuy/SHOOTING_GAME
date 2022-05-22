@@ -223,3 +223,123 @@
 1653102146 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\sdlgame\playgame.cpp
 	"PlayGame.h"
 
+1652185184 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\baseobject.cpp
+	"BaseObject.h"
+
+1652784353 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\baseobject.h
+	"CommonFunc.h"
+
+1653016241 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\commonfunc.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL_mixer.h>
+	<chrono>
+	<thread>
+	<vector>
+	<windows.h>
+	<fstream>
+
+1653116806 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\bossobject.cpp
+	"BossObject.h"
+
+1653101670 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\bossobject.h
+	"CommonFunc.h"
+	"BulletObject.h"
+	"BaseObject.h"
+
+1653065025 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\bulletobject.h
+	"BaseObject.h"
+	"CommonFunc.h"
+
+1653065088 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\bulletobject.cpp
+	"BulletObject.h"
+
+1652866664 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\commonfunc.cpp
+	"CommonFunc.h"
+	"TextObject.h"
+
+1652526503 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\textobject.h
+	"CommonFunc.h"
+
+1651488114 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\explosionobject.cpp
+	"ExplosionObject.h"
+
+1651488117 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\explosionobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651742672 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\game_map.cpp
+	"game_map.h"
+
+1651742451 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\game_map.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1651575175 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\geometric.cpp
+	"Geometric.h"
+
+1651572418 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\geometric.h
+	"CommonFunc.h"
+
+1650645114 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\imptimer.cpp
+	"CommonFunc.h"
+	"ImpTimer.h"
+
+1650906427 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\imptimer.h
+
+1652793189 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\main.cpp
+	"PlayGame.h"
+
+1653067062 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\playgame.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"ImpTimer.h"
+	"ThreatsObject.h"
+	"ExplosionObject.h"
+	"TextObject.h"
+	"PlayerPower.h"
+	"Geometric.h"
+	"PlaneThreats.h"
+	"BossObject.h"
+
+1652805880 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\mainobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1652804396 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\threatsobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1651561193 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\playerpower.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1652804407 c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\planethreats.h
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+
+1653102625 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\mainobject.cpp
+	"MainObject.h"
+
+1652804486 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\planethreats.cpp
+	"PlaneThreats.h"
+
+1652930531 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\playerpower.cpp
+	"PlayerPower.h"
+
+1653102146 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\playgame.cpp
+	"PlayGame.h"
+
+1652524113 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\textobject.cpp
+	"TextObject.h"
+
+1652804304 source:c:\users\admin\onedrive - vnu.edu.vn\game 2d c++\test\shooting_game\shooting_game\threatsobject.cpp
+	"ThreatsObject.h"
+

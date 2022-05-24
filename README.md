@@ -1,11 +1,12 @@
 # SHOOTING_GAME
+Link youtube hướng dẫn cách hoạt động cơ bản của game: *https://www.youtube.com/watch?v=0FTAI7ZdOeI*  
 1. Hướng dẫn cách lấy file code.  
     - Bước 1: Chọn Fork ở góc trên bên phải để liên kết nơi lưu trữ này đến tài khoản của bạn.  
     - Bước 2: Đến thư mục bạn muốn lưu trữ, nhấn chuột phải chọn terminal hoặc gitBash xong gõ câu lệnh:  
         - *git clone https://github.com/[YOUR_USERNAME]/SHOOTING_GAME.git*  
     - Bước 3: Thoát cửa sổ lệnh. Giờ đây file đã được copy vào nơi lưu trữ của bạn.  
 2. Mô tả Game:  
-    - Trò chơi tương tự như game Contra cổ điển nhưng đơn giản hơn.   
+    - Trò chơi tương tự như game Contra cổ điển.   
     - Bạn điều khiển một nhân vật có thể di chuyển tự do, hãy cẩn thận với những quái vật cản đường bạn và những khe vực sâu.  
     - Chú ý bạn chỉ có 3 mạng hãy cẩn thận!  
     - Giới hạn thời gian là 300s, bạn hãy cố gắng đánh bại quái vật 1 cách nhanh nhất có thể, nếu không bạn sẽ thua!  
@@ -18,7 +19,6 @@
       - Những chiếc máy bay có thể thả bom trên bầu trời <=> 20 điểm.  
       - Boss cuối nằm ở gần vạch đích.
     - Hãy cẩn thận vì nếu bạn va phải quái vật hay trúng đạn, bạn sẽ mất 1 mạng.  
-    - Hãy đánh bại và chinh phục trò chơi!  
 3. Chức năng của Game:  
    - (1) Phần menu: có 3 lựa chọn:  
         -  ô "Play Game": bắt đầu game khi ấn vào.

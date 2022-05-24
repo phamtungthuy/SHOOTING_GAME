@@ -122,6 +122,7 @@ void ThreatsObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
         if(x_val_ > 0) {
             int val1 = map_data.tile[y1][x2];
             int val2 = map_data.tile[y2][x2];
+            //check if the threat has collided any blocks
             if((val1 != BLANK_TILE && val1 != STATE_MONEY) || (val2 != BLANK_TILE && val2 != STATE_MONEY)) {
                 if(type_move_ == MOVE_IN_SPACE_THREAT) {
                     swap(input_type_.left_, input_type_.right_);
@@ -136,6 +137,7 @@ void ThreatsObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
         }
         else if(x_val_ < 0) {
             int val1 = map_data.tile[y1][x1], val2 = map_data.tile[y2][x1];
+            //check if the threat has collided any blocks
             if( (val1!= BLANK_TILE && val1 != STATE_MONEY) || (val2 != BLANK_TILE && val2 != STATE_MONEY)) {
                 if(type_move_ == MOVE_IN_SPACE_THREAT) {
                     swap(input_type_.left_, input_type_.right_);
@@ -157,6 +159,7 @@ void ThreatsObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
     if(x1 >= 0 && x2 < MAX_MAP_X && y1 >= 0 && y2 < MAX_MAP_Y) {
         if(y_val_ > 0) {
             int val1 = map_data.tile[y2][x1], val2 = map_data.tile[y2][x2];
+            //check if the threat has collided any blocks
             if( (val1!= BLANK_TILE && val1 != STATE_MONEY) || (val2 != BLANK_TILE && val2 != STATE_MONEY) ) {
                 y_pos_ = y2*TILE_SIZE;
                 y_pos_ -= (height_frame_ + 1);
@@ -167,6 +170,7 @@ void ThreatsObject::CheckToMap(Map& map_data, SDL_Renderer* screen) {
         }
         else if(y_val_ < 0) {
             int val1 = map_data.tile[y1][x1], val2 = map_data.tile[y1][x2];
+            //check if the threat has collided any blocks
             if( (val1 != BLANK_TILE && val1 != STATE_MONEY) || (val2 != BLANK_TILE && val2 != STATE_MONEY)) {
                 y_pos_ = (y1 + 1) * TILE_SIZE ;
                 y_val_ = 0;
@@ -260,11 +264,6 @@ void ThreatsObject::RemoveBullet(const int& idx) {
     if(Size > 0 && idx < Size) {
         BulletObject* &p_bullet = bullet_list_[idx];
         p_bullet->set_is_move(false);
-//        bullet_list_.erase(bullet_list_.begin() + idx);
-//        if(p_bullet != NULL) {
-//            delete p_bullet;
-//            p_bullet = NULL;
-//        }
     }
 }
 

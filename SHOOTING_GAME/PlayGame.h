@@ -17,7 +17,8 @@
 
 static bool isQuit = false;
 static bool fatal;
-static bool firtStep = true;
+static bool firstStep = true;
+static bool replay = false;
 bool InitData();
 void HandleMouse(SDL_Event e, SDL_Rect rect, TextObject &text, SDL_Color default_color = BLACKCOLOR, SDL_Color change_color = REDCOLOR);
 bool loadBackground();

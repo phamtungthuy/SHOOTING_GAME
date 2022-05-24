@@ -13,6 +13,7 @@ BossObject* p_boss;
 bool InitData() {
     fatal = true;
     val_time = 300;
+
     time_game.SetColor(TextObject::WHITE_TEXT);
     mark_game.SetColor(TextObject::WHITE_TEXT);
     moneyCount.SetColor(TextObject::WHITE_TEXT);
@@ -88,6 +89,7 @@ vector<ThreatsObject*> MakeThreadList() {
     vector<ThreatsObject*> list_threats;
 
     ThreatsObject* dynamic_threats = new ThreatsObject[20];
+    //Creat monsters can move
     for(int i = 0; i < 20; i++) {
         ThreatsObject* p_threat = (dynamic_threats + i);
         if(p_threat != NULL) {
@@ -106,7 +108,7 @@ vector<ThreatsObject*> MakeThreadList() {
     }
 
     ThreatsObject* thread_objs = new ThreatsObject[20];
-
+    //Creat static monsters
     for(int i = 0; i < 20; i++) {
         ThreatsObject* p_threat = (thread_objs + i);
         if(p_threat != NULL) {
@@ -168,6 +170,7 @@ void HandleBoss(BossObject* p_boss, MainObject& p_player, Map& map_data, Explosi
     SDL_Rect rect_player = p_player.GetRectFrame();
     bool bCol1 = false;
     vector<BulletObject*> tBullet_list = p_boss->get_bullet_list();
+    //check if all the bullets of the monster collide with the character
     for(int j = 0; j < tBullet_list.size(); ++j) {
         BulletObject* pt_bullet = tBullet_list[j];
         if(pt_bullet != NULL) {
@@ -210,6 +213,7 @@ void HandleBoss(BossObject* p_boss, MainObject& p_player, Map& map_data, Explosi
 
 void HandleConflictWithBoss(MainObject &p_player, BossObject* p_boss, ExplosionObject &exp_threat) {
     vector<BulletObject*> bullet_arr = p_player.get_bullet_list();
+    //check if all the character's bullets collide with monsters
     for(int r = 0; r < bullet_arr.size(); r++) {
         BulletObject* p_bullet = bullet_arr[r];
         if(p_bullet != NULL) {
@@ -246,6 +250,7 @@ void HandleConflictWithBoss(MainObject &p_player, BossObject* p_boss, ExplosionO
 
 void HandleConflict(MainObject &p_player, vector<auto> &threats_list, ExplosionObject &exp_threat) {
     vector<BulletObject*> bullet_arr = p_player.get_bullet_list();
+    //check if all the character's bullets collide with monsters
     for(int r = 0; r < bullet_arr.size(); r++) {
         BulletObject* p_bullet = bullet_arr[r];
         if(p_bullet != NULL) {
@@ -304,6 +309,7 @@ void HandleBulletThreats(MainObject &p_player, vector<auto> &threats_list, Explo
             SDL_Rect rect_player = p_player.GetRectFrame();
             bool bCol1 = false;
             vector<BulletObject*> tBullet_list = p_threat->get_bullet_list();
+            //check if all bullets collide with the character
             for(int j = 0; j < tBullet_list.size(); ++j) {
                 BulletObject* pt_bullet = tBullet_list[j];
                 if(pt_bullet != NULL) {
@@ -319,6 +325,7 @@ void HandleBulletThreats(MainObject &p_player, vector<auto> &threats_list, Explo
             bool bCol2 = CheckCollision(rect_player, rect_threat);
 
             if(bCol1 || bCol2) {
+                //Load image explosion
                 for(int i = 0; i < NUM_FRAME_EXP; i++) {
                     int x_pos = p_player.GetRect().x - exp_main.get_frame_width()*0.5;
                     int y_pos = p_player.GetRect().y - exp_main.get_frame_height()*0.5;
@@ -385,10 +392,12 @@ void showMenu() {
             if(text[i].getType() == BUTTON_SPRITE_MOUSE_DOWN) {
                 loadChunk(".\\img\\game resource\\beep_.wav", g_chunk);
                 Mix_PlayChannel(-1, g_chunk, 0);
-                SDL_Delay(200);
+                //SDL_Delay(200);
                 if(text[i].GetText() == "Exit") {
+                    SDL_Delay(200);
                     close();
                     exit(1);
+
                 }
                 else if(text[i].GetText() == "Play Game")is_quit = true;
                 else if(text[i].GetText() == "Tutorial") {
@@ -400,7 +409,6 @@ void showMenu() {
         SDL_RenderPresent(g_screen);
         SDL_Delay(100);
     }
-    time_over = SDL_GetTicks()/ 1000;
 }
 
 void showTutorial() {
@@ -429,7 +437,7 @@ void showTutorial() {
                 case SDL_QUIT:
                     close();
                     exit(1);
-                }
+            }
             HandleMouse(e_tutorial, sub_text[5].getRect(), sub_text[5], BLUECOLOR);
         }
 
@@ -441,7 +449,7 @@ void showTutorial() {
         if(sub_text[5].getType() == BUTTON_SPRITE_MOUSE_DOWN) {
              Mix_PlayChannel(-1, g_chunk, 0);
             is_quit = true;
-            SDL_Delay(200);
+            //SDL_Delay(200);
         }
 
         SDL_RenderPresent(g_screen);
@@ -551,7 +559,7 @@ void HandleMouse(SDL_Event e, SDL_Rect rect, TextObject &text, SDL_Color default
 
 
 void showBox() {
-    SDL_Delay(500);
+    SDL_Delay(200);
     SDL_Event e;
     TextObject text[4];
     text[0].SetText("Congratulation!You Win");
@@ -596,7 +604,6 @@ void showBox() {
         SDL_Delay(100);
     }
     time_over = SDL_GetTicks()/ 1000;
-    firtStep = false;
 }
 
 void showOptions() {
@@ -606,13 +613,14 @@ void showOptions() {
     SDL_RenderClear(g_screen);
     SDL_Event e;
     bool is_quit = false;
-    TextObject text[3];
+    TextObject text[4];
     text[0].SetText("Remuse");
-    text[1].SetText("Tutorial");
-    text[2].SetText("Exit");
-    for(int i = 0; i < 3; i++) {
+    text[1].SetText("Replay");
+    text[2].SetText("Tutorial");
+    text[3].SetText("Exit");
+    for(int i = 0; i < 4; i++) {
         int leng = text[i].GetText().length() * 30;
-        text[i].SetRect((SCREEN_WIDTH - leng) / 2, 250 + 80*i);
+        text[i].SetRect((SCREEN_WIDTH - leng) / 2, 200 + 80*i);
         text[i].SetColor(BLACKCOLOR);
     }
     while(!is_quit) {
@@ -625,28 +633,34 @@ void showOptions() {
             case SDL_KEYDOWN:
                 if(e.key.keysym.sym == SDLK_ESCAPE) is_quit = true;
             }
-            for(int i = 0; i < 3; i++) {
+            for(int i = 0; i < 4; i++) {
                 HandleMouse(e, text[i].getRect(), text[i]);
             }
 
         }
         background_menu.Render(g_screen, NULL);
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 4; i++) {
             text[i].LoadFromRenderText(font_menu, g_screen);
             text[i].RenderText(g_screen, text[i].getPosX(), text[i].getPosY());
         }
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 4; i++) {
             if(text[i].getType() == BUTTON_SPRITE_MOUSE_DOWN) {
                 loadChunk(".\\img\\game resource\\beep_.wav", g_chunk);
                 Mix_PlayChannel(-1, g_chunk, 0);
-                SDL_Delay(200);
+                //SDL_Delay(200);
                 if(text[i].GetText() == "Exit") {
+                    SDL_Delay(200);
                     close();
                     exit(1);
                 }
                 else if(text[i].GetText() == "Remuse")is_quit = true;
                 else if(text[i].GetText() == "Tutorial") {
                     showTutorial();
+                }
+                else if(text[i].GetText() == "Replay") {
+                    isQuit = true;
+                    is_quit = true;
+                    replay = true;
                 }
             }
         }
@@ -655,12 +669,14 @@ void showOptions() {
         SDL_Delay(100);
     }
     time_over = SDL_GetTicks()/ 1000 - 300 + val_time;
+
     Mix_ResumeMusic();
 }
 
 void playGame() {
     ImpTimer fps_timer;
-    if(firtStep) {
+    time_over = SDL_GetTicks()/1000;
+    if(firstStep) {
 
         if(!InitData()) {
             logSDLError(cout, "init", true);
@@ -669,6 +685,7 @@ void playGame() {
         if(loadBackground() == false) {
             logSDLError(cout, "load background", true);
         }
+        firstStep = false;
         showMenu();
     }
     mark_value = 0;
@@ -773,4 +790,9 @@ void playGame() {
         }
     }
     p_player.reset();
+    if(!replay)showBox();
+    else {
+        isQuit = false;
+        replay = false;
+    }
 }

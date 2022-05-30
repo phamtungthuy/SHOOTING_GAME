@@ -5,6 +5,8 @@ Link youtube hướng dẫn cách hoạt động cơ bản của game: *https://
     - Bước 2: Đến thư mục bạn muốn lưu trữ, nhấn chuột phải chọn terminal hoặc gitBash xong gõ câu lệnh:  
         - *git clone https://github.com/[YOUR_USERNAME]/SHOOTING_GAME.git*  
     - Bước 3: Thoát cửa sổ lệnh. Giờ đây file đã được copy vào nơi lưu trữ của bạn.  
+        *(Bạn cần có trình biên dịch để chạy: codeblocks, visual studio code, visual studio 2022, 2019, ...  
+        và thư viện SDL, SDL_image, SDL_mixer, SDL_ttf)*    
 2. Mô tả Game:  
     - Trò chơi tương tự như game Contra cổ điển.   
     - Bạn điều khiển một nhân vật có thể di chuyển tự do, hãy cẩn thận với những quái vật cản đường bạn và những khe vực sâu.  
@@ -31,7 +33,7 @@ Link youtube hướng dẫn cách hoạt động cơ bản của game: *https://
    - (6) Nếu chết có thể ấn nút SPACE để chơi lại hoặc nút ESC để thoát game.  
    - (7) Dùng dấu mũi tên LEFT, RIGHT, UP, DOWN trên bàn phím để di chuyển nhân vật.  
    - (8) Nút A dùng để bắn và nút SPACE dùng để nhảy.
-   - (9) Nút ESC dùng để tạm dừng trò chơi
+   - (9) Nút ESC dùng để tạm dừng trò chơi và bật options.
    - (10) Có thể bắn sang trái, phải, hoặc bắn 1 góc 45 độ phía trên hoặc dưới.  
    - (11) Chạm vào cây cờ cuối bản đồ để giành chiến thắng.  
 4. Kỹ thuật được sử dụng trong dự án:  

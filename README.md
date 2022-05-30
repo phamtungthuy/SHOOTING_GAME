@@ -33,7 +33,7 @@ Link youtube hướng dẫn cách hoạt động cơ bản của game: *https://
    - (6) Nếu chết có thể ấn nút SPACE để chơi lại hoặc nút ESC để thoát game.  
    - (7) Dùng dấu mũi tên LEFT, RIGHT, UP, DOWN trên bàn phím để di chuyển nhân vật.  
    - (8) Nút A dùng để bắn và nút SPACE dùng để nhảy.
-   - (9) Nút ESC dùng để tạm dừng trò chơi
+   - (9) Nút ESC dùng để tạm dừng trò chơi và bật options.
    - (10) Có thể bắn sang trái, phải, hoặc bắn 1 góc 45 độ phía trên hoặc dưới.  
    - (11) Chạm vào cây cờ cuối bản đồ để giành chiến thắng.  
 4. Kỹ thuật được sử dụng trong dự án:  
